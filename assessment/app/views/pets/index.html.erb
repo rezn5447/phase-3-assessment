@@ -4,11 +4,14 @@
 <div class="pets-container container-fluid">
   <% @pets.each do |pet| %>
     <div class="pet-container">
-      <p class="name">Name:  <%= pet.name %></p>
+      <p class="name">Name:  <%= link_to(pet.name, remote: true)%></p>
       <p class="breed">Breed:  <%= pet.breed %></p>
       <p class="age">Age:  <%= pet.age %></p>
       <p class="cute">Is this pet....cute?   <%= pet.cute %></p>
       <%= link_to 'Meet this Pet', pet_path(pet) %>
     </div>
   <% end %>
+     <div class="toys-container">
+
+    </div>
 </div>
