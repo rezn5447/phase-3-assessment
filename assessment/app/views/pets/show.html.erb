@@ -1,5 +1,4 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<h1>This pet's name is: <%= @pet.name %> !</h1>
 
 <div class="pets-container container-fluid">
     <div class="pet-container">
@@ -7,6 +6,12 @@
       <p class="breed"><%= @pet.breed %></p>
       <p class="age"><%= @pet.age %></p>
       <p class="cute"><%= @pet.cute %></p>
+    </div>
+     <div class="toys-container">
+      <p>Current List of This Pets Toys:</p>
+      <% @pet.toys.each do |toy| %>
+        <p class="description"><%= toy.description %></p>
+      <% end %>
       <%= link_to 'back to all Pets', root_path %>
     </div>
 </div>
