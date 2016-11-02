@@ -1,11 +1,13 @@
 
 <h1>Meet the Pets!</h1>
 
-<div class="pets-container">
+<div class="pets-container container-fluid">
   <% @pets.each do |pet| %>
     <div class="pet-container">
       <p class="name"><%= pet.name %></p>
-      <p class="description"><%= pet.description %></p>
+      <p class="breed"><%= pet.breed %></p>
+      <p class="age"><%= pet.age %></p>
+      <p class="cute"><%= pet.cute %></p>
       <%= link_to 'Meet this Pet', pet_path(pet) %>
     </div>
   <% end %>
