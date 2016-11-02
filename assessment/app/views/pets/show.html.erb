@@ -2,7 +2,7 @@
 
 <div class="pets-container container-fluid">
     <div class="pet-container">
-      <p class="name"><%= @pet.name %></p>
+      <p class="name"><%= link_to @pet.name, pet_toys_path(@pet) %></p>
       <p class="breed"><%= @pet.breed %></p>
       <p class="age"><%= @pet.age %></p>
       <p class="cute"><%= @pet.cute %></p>
