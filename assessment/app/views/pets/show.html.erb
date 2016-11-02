@@ -1,2 +1,12 @@
 <h1>Pets#show</h1>
 <p>Find me in app/views/pets/show.html.erb</p>
+
+<div class="pets-container container-fluid">
+    <div class="pet-container">
+      <p class="name"><%= @pet.name %></p>
+      <p class="breed"><%= @pet.breed %></p>
+      <p class="age"><%= @pet.age %></p>
+      <p class="cute"><%= @pet.cute %></p>
+      <%= link_to 'back to all Pets', root_path %>
+    </div>
+</div>
